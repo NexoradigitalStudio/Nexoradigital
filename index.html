@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora Digital – Brisbane Digital Marketing</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', Arial, sans-serif;
+      background: #f9fafc;
+      color: #222;
+    }
+    .container {
+      max-width: 1140px;
+      margin: auto;
+      padding: 0 1.2rem;
+    }
+    /* Header & nav */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 0 1rem 0;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    }
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0052ff;
+      letter-spacing: 1px;
+    }
+    nav a {
+      color: #222;
+      text-decoration: none;
+      margin: 0 1.3rem;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #0052ff;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(115deg, #0052ffb6, #222a3db7), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover;
+      color: #fff;
+      text-align: center;
+      border-radius: 0 0 2.5rem 2.5rem;
+      padding: 90px 20px 80px 20px;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.22rem;
+      margin-bottom: 1.6rem;
+      opacity: 0.97;
+    }
+    .hero-btn, .action-btn {
+      background: #ffce22;
+      color: #1a202c;
+      border: none;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      padding: 1rem 2.4rem;
+      border-radius: 2rem;
+      font-size: 1.09rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px 0 rgba(0,82,255,0.13);
+      transition: all 0.2s;
+      margin: 0.7rem 0;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .hero-btn:hover, .action-btn:hover {
+      background: #1a202c;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    /* Mini-bio */
+    .mini-bio {
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 1px 6px rgba(0,82,255,0.06);
+      padding: 2.5rem 1.5rem 2rem 1.5rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .mini-bio h2 {
+      color: #0052ff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.7rem;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6em;
+    }
+    .mini-bio img {
+      width: 84px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #ffce22;
+    }
+    .mini-bio p {
+      font-size: 1.13rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Sections */
+    section {
+      margin: 2.7rem 0;
+      padding: 2rem 0;
+    }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      color: #0052ff;
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+    }
+    .section-title i {
+      color: #ffce22;
+    }
+    .why-explainer {
+      font-size: 1.13rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.7;
+    }
+
+    /* Services & Strengths grid */
+    .services-strengths {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2rem;
+      margin-bottom: 2.5rem;
+      justify-content: space-between;
+    }
+    .service-block, .strength-card {
+      flex: 1 1 260px;
+      background: #f8fafe;
+      border-radius: 1rem;
+      padding: 1.4rem;
+      margin: 0.7rem 0;
+      box-shadow: 0 1px 6px rgba(0,82,255,0.07);
+      min-width: 250px;
+    }
+    .service-block h3 {
+      font-size: 1.18rem;
+      color: #0052ff;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .service-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .service-block li {
+      margin-bottom: 0.5rem;
+      font-size: 1.04rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .strengths-title {
+      font-size: 1.16rem;
+      color: #1a202c;
+      font-family: 'Montserrat', sans-serif;
+      margin: 1.2rem 0 0.5rem 0;
+    }
+    .strength-card {
+      background: #e5f0ff;
+      margin-bottom: 0.7rem;
+    }
+    .strength-card strong {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      font-size: 1.08rem;
+      color: #0052ff;
+      margin-bottom: 0.3em;
+    }
+
+    /* Mini-story */
+    .mini-story {
+      background: #f0f4ff;
+      border-left: 6px solid #0052ff;
+      padding: 1.3rem 2rem;
+      border-radius: 1.1rem;
+      font-size: 1.12rem;
+      margin: 2.5rem 0 1.5rem 0;
+      line-height: 1.8;
+    }
+    /* Call to action contact */
+    .contact-section {
+      background: #222a3d;
+      color: #fff;
+      padding: 2.5rem 1rem;
+      border-radius: 2rem;
+      text-align: center;
+      margin: 3rem 0 2rem 0;
+    }
+    .contact-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #ffce22;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .contact-section p {
+      margin-bottom: 1.5rem;
+      font-size: 1.14rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #0052ff;
+      color: #fff;
+      text-align: center;
+      padding: 1.6rem 0 1rem 0;
+      font-size: 1.07rem;
+      border-radius: 2.5rem 2.5rem 0 0;
+    }
+    .footer-links a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: underline;
+      font-size: 1.02rem;
+    }
+    .footer-links a:hover {
+      text-decoration: none;
+      color: #ffce22;
+    }
+    @media (max-width: 900px) {
+      .services-strengths {
+        flex-direction: column;
+        gap: 1.3rem;
+      }
+      header {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="logo"><i class="fas fa-bolt"></i> Nexora Digital</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1><i class="fas fa-rocket"></i> Brisbane Digital Marketing Partner</h1>
+    <p>Dare to turn your ambition into real success.</p>
+    <a href="#contact" class="hero-btn">Start My Success Story</a>
+  </div>
+
+  <main class="container">
+    <!-- Mini-bio/story -->
+    <section class="mini-bio" id="about">
+      <h2><i class="fas fa-user"></i> Meet the Founder</h2>
+      <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Jordan, Founder of Nexora Digital">
+      <p>
+        I’m Jordan, founder of Nexora Digital.<br>
+        My journey began hands-on—in logistics, customer service, procurement, and managing 50+ supplier relationships across Europe and Asia.<br>
+        I’ve led strategic projects in pharmaceuticals, cosmetics, and precision engineering, building real business impact at every stage.<br>
+        Today, I bring this experience to Australia—helping Brisbane businesses gain clarity, structure, and momentum with a strategic, human-centered digital approach.
+      </p>
+      <a href="#contact" class="action-btn">Contact me</a>
+    </section>
+
+    <!-- Why Nexora? -->
+    <section>
+      <div class="section-title"><i class="fas fa-question-circle"></i>Why Nexora? Where progress meets presence.</div>
+      <div class="why-explainer">
+        At Nexora, <b>Next</b> is your strategy—clear, forward-thinking.<br>
+        <b>Aura</b> is your presence—visible, magnetic. Together, they shape growth that resonates.<br>
+        We don’t just build websites or run ads—we build <b>momentum</b>. Your vision deserves clarity and visibility. That’s where we come in.
+      </div>
+    </section>
+
+    <!-- Services & Strengths -->
+    <section id="services">
+      <div class="section-title"><i class="fas fa-tools"></i>Our Services</div>
+      <div class="services-strengths">
+        <div class="service-block">
+          <h3><i class="fas fa-globe"></i> Digital Marketing</h3>
+          <ul>
+            <li><i class="fas fa-laptop-code"></i> Website Design & Development</li>
+            <li><i class="fas fa-search"></i> SEO / SEA / SMO / SMA</li>
+            <li><i class="fas fa-bullhorn"></i> Digital Advertising</li>
+            <li><i class="fas fa-palette"></i> Branding & Visual Identity</li>
+            <li><i class="fas fa-robot"></i> Business Automation</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <h3><i class="fas fa-file-invoice-dollar"></i> Sales Administration (ADV)</h3>
+          <ul>
+            <li><i class="fas fa-box"></i> Order Processing</li>
+            <li><i class="fas fa-file-invoice"></i> Invoicing</li>
+            <li><i class="fas fa-credit-card"></i> Payment Follow-up</li>
+            <li><i class="fas fa-handshake"></i> Customer Relationship Management</li>
+            <li><i class="fas fa-user-cog"></i> Admin Support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="strengths-title"><i class="fas fa-gem"></i> The Nexora Strengths</div>
+      <div class="services-strengths">
+        <div class="strength-card">
+          <strong><i class="fas fa-puzzle-piece"></i>Brisbane-Focused Digital Solutions</strong>
+          Custom strategies for Brisbane’s local and growing businesses, tailored to your unique goals and market.
+        </div>
+        <div class="strength-card">
+          <strong><i class="fas fa-rocket"></i>Real Results for Your Business Growth</strong>
+          See your Brisbane business move forward with every action—measurable, visible progress, not just promises.
+        </div>
+        <div class="strength-card">
+          <strong><i class="fas fa-lightbulb"></i>Innovation at Your Fingertips</strong>
+          Stay ahead in Brisbane’s dynamic market with the latest digital tools and creative marketing.
+        </div>
+        <div class="strength-card">
+          <strong><i class="fas fa-bullseye"></i>Clear Commitment, Real Support</strong>
+          Honest advice, clear communication, and true partnership—no jargon, no surprises.
+        </div>
+        <div class="strength-card">
+          <strong><i class="fas fa-handshake"></i>Your Local Digital Partner</strong>
+          A proactive, responsive ally, right here in Brisbane, supporting your success at every step.
+        </div>
+      </div>
+    </section>
+
+    <!-- Projection/mini-story -->
+    <section>
+      <div class="section-title"><i class="fas fa-eye"></i>Picture this…</div>
+      <div class="mini-story">
+        In just a few weeks, your Brisbane business is attracting new local customers thanks to a stronger, more visible online presence.<br>
+        People discover your services, trust your brand, and reach out—impressed by your professional and authentic image.<br>
+        Every digital action we take together delivers real, trackable results you can measure day by day.<br>
+        <br>
+        <b>This isn’t just wishful thinking—it’s already what our first Brisbane clients are experiencing with Nexora Digital.</b>
+      </div>
+      <div style="text-align:center;">
+        <a href="#contact" class="hero-btn">Start My Success Story</a>
+      </div>
+    </section>
+
+    <!-- Call to Action Contact -->
+    <section class="contact-section" id="contact">
+      <h3><i class="fas fa-paper-plane"></i>Ready to connect?</h3>
+      <p>
+        Want to work with someone who understands the real challenges of growing a business? <br>
+        Let’s book a quick call and explore your next success story together.<br>
+      </p>
+      <a href="mailto:contact@nexora.com" class="action-btn"><i class="fas fa-calendar"></i> Book a Free Consultation</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#about">About</a> |
+      <a href="#services">Services</a> |
+      <a href="mailto:contact@nexora.com">Contact</a>
+    </div>
+    <div style="margin-top:1rem; font-size:0.98rem;">&copy; 2025 Nexora Digital – Brisbane</div>
+  </footer>
+</body>
+</html>
